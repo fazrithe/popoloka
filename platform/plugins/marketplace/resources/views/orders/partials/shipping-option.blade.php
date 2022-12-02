@@ -10,7 +10,7 @@
         data-option="{{ $shippingOption }}"
         data-id="{{ $storeId }}">
     <label for="{{ "shipping-method-$storeId-$shippingKey-$shippingOption" }}">
-        {{ $shippingItem['name'] }} - 
+        {{ $shippingItem['name'] }} -
         @if ($shippingItem['price'] > 0)
             {{ format_price($shippingItem['price']) }}
         @else

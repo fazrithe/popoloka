@@ -256,3 +256,12 @@
         </div>
     @endif
 @stop
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+     $(document).on('change', 'select.courier', () => {
+        let courier = event.target.value;
+        const selectedState = $('.customer-address-payment-form #address_state option:selected').val();
+        const selectedCity = $('.customer-address-payment-form #address_city option:selected').val();
+        console.log(selectedCity);
+    });
+</script>

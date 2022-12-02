@@ -116,7 +116,15 @@
                         <div class="mx-0">
                             <h6>{{ __('Shipping method') }}:</h6>
                         </div>
-
+                        <div class="form-group">
+                            <label>PROVINSI TUJUAN</label>
+                            <select name="courier" class="form-control courier" id="courier">
+                                <option value="0">-- pilih kurir --</option>
+                                <option value="jne">JNE</option>
+                                <option value="pos">POS</option>
+                                <option value="tiki">TIKI</option>
+                            </select>
+                        </div>
                         <input type="hidden" name="shipping_option[{{ $storeId }}]" value="{{ old("shipping_option.$storeId", $defaultShippingOption) }}">
                         <div id="shipping-method-{{ $storeId }}">
                             <ul class="list-group list_payment_method">
@@ -141,3 +149,4 @@
         </div>
     @endforeach
 </div>
+
