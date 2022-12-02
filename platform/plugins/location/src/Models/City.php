@@ -23,6 +23,7 @@ class City extends BaseModel
      */
     protected $fillable = [
         'name',
+        'city_id',
         'state_id',
         'country_id',
         'record_id',

@@ -13,39 +13,39 @@ class DatabaseSeeder extends BaseSeeder
      */
     public function run()
     {
-        $this->activateAllPlugins();
+        // $this->activateAllPlugins();
 
-        $this->call(LanguageSeeder::class);
-        $this->call(BrandSeeder::class);
-        $this->call(CurrencySeeder::class);
-        $this->call(ProductCategorySeeder::class);
-        $this->call(ProductCollectionSeeder::class);
-        $this->call(ProductLabelSeeder::class);
-        $this->call(ProductTagSeeder::class);
-        $this->call(ProductAttributeSeeder::class);
-        $this->call(ProductSeeder::class);
-        $this->call(TaxSeeder::class);
-        $this->call(CustomerSeeder::class);
-        $this->call(ReviewSeeder::class);
-        $this->call(ShippingSeeder::class);
-        $this->call(StoreLocatorSeeder::class);
-        $this->call(FlashSaleSeeder::class);
-        $this->call(SimpleSliderSeeder::class);
-        $this->call(BlogSeeder::class);
-        $this->call(PageSeeder::class);
-        $this->call(UserSeeder::class);
-        $this->call(SettingSeeder::class);
-        $this->call(AdsSeeder::class);
-        $this->call(FaqSeeder::class);
-        $this->call(WidgetSeeder::class);
-        $this->call(ThemeOptionSeeder::class);
+        // $this->call(LanguageSeeder::class);
+        // $this->call(BrandSeeder::class);
+        // $this->call(CurrencySeeder::class);
+        // $this->call(ProductCategorySeeder::class);
+        // $this->call(ProductCollectionSeeder::class);
+        // $this->call(ProductLabelSeeder::class);
+        // $this->call(ProductTagSeeder::class);
+        // $this->call(ProductAttributeSeeder::class);
+        // $this->call(ProductSeeder::class);
+        // $this->call(TaxSeeder::class);
+        // $this->call(CustomerSeeder::class);
+        // $this->call(ReviewSeeder::class);
+        // $this->call(ShippingSeeder::class);
+        // $this->call(StoreLocatorSeeder::class);
+        // $this->call(FlashSaleSeeder::class);
+        // $this->call(SimpleSliderSeeder::class);
+        // $this->call(BlogSeeder::class);
+        // $this->call(PageSeeder::class);
+        // $this->call(UserSeeder::class);
+        // $this->call(SettingSeeder::class);
+        // $this->call(AdsSeeder::class);
+        // $this->call(FaqSeeder::class);
+        // $this->call(WidgetSeeder::class);
+        // $this->call(ThemeOptionSeeder::class);
+        $this->call(LocationsSeeder::class);
+        // if (is_plugin_active('marketplace')) {
+        //     $this->call(MarketplaceSeeder::class);
+        // }
 
-        if (is_plugin_active('marketplace')) {
-            $this->call(MarketplaceSeeder::class);
-        }
-
-        $this->call(MenuSeeder::class);
-        $this->call(OrderEcommerceSeeder::class);
+        // $this->call(MenuSeeder::class);
+        // $this->call(OrderEcommerceSeeder::class);
 
     }
 }
