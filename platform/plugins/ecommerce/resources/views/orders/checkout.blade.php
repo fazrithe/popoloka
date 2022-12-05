@@ -27,7 +27,9 @@
 
                         <!---------------------- RENDER PRODUCTS IN HERE ---------------- -->
                         {!! apply_filters(RENDER_PRODUCTS_IN_CHECKOUT_PAGE, $products) !!}
-
+                        @foreach($products as $val)
+                            <input type="hidden" id="storeCity" value="{{ $val->store->city }}">
+                        @endforeach
                         <div class="mt-2 p-2">
                             <div class="row">
                                 <div class="col-6">
@@ -262,6 +264,9 @@
         let courier = event.target.value;
         const selectedState = $('.customer-address-payment-form #address_state option:selected').val();
         const selectedCity = $('.customer-address-payment-form #address_city option:selected').val();
-        console.log(selectedCity);
+        const $marketplace = $('.checkout-products-marketplace');
+        const storeCity = $('#storeCity').val();
+        console.log(storeCity);
+
     });
 </script>
