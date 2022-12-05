@@ -44,6 +44,7 @@ class Order extends BaseModel
         'discount_description',
         'is_finished',
         'token',
+        'snap_token'
     ];
 
     /**
