@@ -120,6 +120,7 @@
                             <div>
                                 <h5 class="checkout-payment-title">{{ __('Shipping information') }}</h5>
                                 <input type="hidden" value="{{ route('public.checkout.save-information', $token) }}" id="save-shipping-information-url">
+                                <input type="hidden" value="{{ route('public.checkout.information', $token) }}" id="shipping-information-url">
                                 @include('plugins/ecommerce::orders.partials.address-form', compact('sessionCheckoutData'))
                             </div>
                             <br>
@@ -267,6 +268,26 @@
         const $marketplace = $('.checkout-products-marketplace');
         const storeCity = $('#storeCity').val();
         console.log(storeCity);
-
+        $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+                    type: 'POST',
+                    cache: false,
+                    url: $('#shipping-information-url').val(),
+                    data: {},
+                    contentType: false,
+                    processData: false,
+                    success: res => {
+                        if (!res.error) {
+                            console.log("success");
+                        }
+                    },
+                    error: res => {
+                        console.log(res);
+                    }
+                });
     });
 </script>
